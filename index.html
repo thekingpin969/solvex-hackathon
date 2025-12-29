@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,6 +38,17 @@
       .clip-button {
         clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
       }
+      .clip-ticket {
+        clip-path: polygon(
+          10px 0, calc(100% - 10px) 0, 
+          100% 10px, 100% calc(50% - 10px), 
+          calc(100% - 10px) 50%, 100% calc(50% + 10px), 
+          100% calc(100% - 10px), calc(100% - 10px) 100%, 
+          10px 100%, 0 calc(100% - 10px), 
+          0 calc(50% + 10px), 10px 50%, 
+          0 calc(50% - 10px), 0 10px
+        );
+      }
       .text-stroke {
         -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
         color: transparent;
@@ -46,14 +57,29 @@
          -webkit-text-stroke: 2px rgba(255, 255, 255, 0.2);
          color: transparent;
       }
+      .text-stroke-white {
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(6deg); }
+        50% { transform: translateY(-15px) rotate(8deg); }
+      }
+      .animate-float {
+        animation: float 4s ease-in-out infinite;
+      }
     </style>
   <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?external=react",
+    "framer-motion": "https://esm.sh/framer-motion@11.0.3?external=react,react-dom",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
   }
 }
 </script>

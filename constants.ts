@@ -1,4 +1,4 @@
-import { Benefit, Objective, ScheduleItem } from "./types";
+import { Benefit, Objective, ScheduleItem, Speaker } from "./types";
 import { Lightbulb, Users, Layers, Rocket, GraduationCap } from "lucide-react";
 
 export const OBJECTIVES: Objective[] = [
@@ -27,8 +27,34 @@ export const EVENT_DETAILS = {
 };
 
 export const MOCK_SCHEDULE: ScheduleItem[] = [
-  { day: "Day 1", title: "Kickoff & Ideation", desc: "Jan 9th - Opening Ceremony, Problem Statement Release, Ideation Phase Begins." },
-  { day: "Day 1", title: "Prototyping", desc: "Jan 9th (Evening) - Mentorship Rounds, Core Development, Midnight Review." },
-  { day: "Day 2", title: "Final Polish", desc: "Jan 10th (Morning) - Pitch Prep, Final Commits, Prototype Testing." },
-  { day: "Day 2", title: "Judging & Awards", desc: "Jan 10th (Afternoon) - Final Presentations, Evaluation, Prize Distribution." },
+  { day: "Day 1", title: "Kickoff and Orientation", desc: "Jan 9th - Opening Ceremony and Team Formation." },
+  { day: "Day 2", title: "Building and Collaborating", desc: "Jan 10th - Intensive Development and Mentorship." },
+  { day: "Day 3", title: "Presentation and Judging", desc: "Jan 11th - Final Pitches and Prize Distribution." },
+];
+
+export const SPEAKERS: Speaker[] = [
+  { 
+    id: 1, 
+    name: "Miracle Korsgaard", 
+    role: "CEO & COO at Zonlo", 
+    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=800" 
+  },
+  { 
+    id: 2, 
+    name: "Davis George", 
+    role: "Co-Founder at Pino", 
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800" 
+  },
+  { 
+    id: 3, 
+    name: "Ryan Dias", 
+    role: "Founder at Plun", 
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800" 
+  },
+  { 
+    id: 4, 
+    name: "Kierra Culhane", 
+    role: "CEO & Co-Founder at Z", 
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" 
+  },
 ];
